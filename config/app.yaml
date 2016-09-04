@@ -1,0 +1,10 @@
+default:
+ port: 8888
+ name: 'Twitter Feed'
+ twitter:
+  consumerKey: 'Bu6Lb512R7uaY9iX5n8Qthrdf'
+  consumerSecret: 'qPlKGMbmknqEOFniEPkxUTDn1Kt8cd7l9oA50Hftb7fBMqpbwl'
+ host: 'http://127.0.0.1'
+
+test:
+ port: 8888
