@@ -1,9 +1,35 @@
   <div class="row search">
 		<div class="column column-80">
-			<input class="search--input" name="userInput" type="text" placeholder="Search for twitter user"></input>
+			<input id="search" class="search--input" name="userInput" type="text" placeholder="Search for twitter user"></input>
 		</div>
 
 		<div class="column column-20">
-			<button class="search--button">Go!</button>
+			<button onclick="redirectToUser()" class="search--button button button- button-outline">Go!</button>
 		</div>
   </div>
+
+	{{#if user}}
+	<div class="user">
+		<div class="row">
+				<img class="user--img column column-10" src={{user.picture}} alt={{user.anem}}/>
+				<div class="user--description column column-90">
+					<h3 class="user--name"> {{user.name}} </h3>
+					<div class="user--description column-50">
+						<p class="column column-90">Profile description</p>
+					</div>
+
+				</div>
+
+		</div>
+
+	</div>
+	{{/if}}
+
+
+<div class="tweets-container">
+	{{#each tweets}}
+		<div class="tweets-container--tweet column column-80">
+			{{content}}
+		</div>
+	{{/each}}
+</div>

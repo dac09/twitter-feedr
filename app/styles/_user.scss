@@ -1,0 +1,25 @@
+.user {
+	border-radius: 5px;
+	background: #f4f5f6;
+	padding: 20px;
+
+	&--img {
+		height: 100%;
+	}
+
+	&--name {
+	}
+}
+
+.tweets-container {
+	padding: 2em;
+
+	&--tweet {
+		font-style: oblique;
+		padding: 30px;
+		margin: 10px;
+		border-radius: 10px;
+		border: .1rem solid #d1d1d1;
+		word-break: break-all;
+	}
+}
