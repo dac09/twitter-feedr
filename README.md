@@ -1,29 +1,10 @@
-# Silly Mars Rover aka Remote Control Car API
+# !! NOT WORKING !!
+## Twitter Feedr
 
  - **Mocha and Chai** for testing.
  - **Express**
  - **LowDB**
-
-Structure
----------
-```json
-/app
-	/controllers (Controllers of the app)
-	/Middlewares (Middlewares for the routes of the app)
-	/Routes (Routes for Controllers of the app)
-	/Services (Services for using in any Controller)
-	Router.js (Config file for Routing)
-/config
-	db.js (DB configuration for use)
-	middleware.js (All middlewares for using in the express server)
-  app.yaml (Config file for the app)
-/tasks
-	migrate.js (Script file for create the table for the test case)
-/test (The test files for BDD)
-/utils
-	autoload.js (Script file for autoload specifics files)
-server.js (Main file to start the app)
-```
+- **PassportJS**
 
 *install*
 ------------
