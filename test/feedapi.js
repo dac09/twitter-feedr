@@ -15,7 +15,7 @@ const URI = 'http://127.0.0.1:' + config.port;
 
 describe('Status :', () => {
 
-  const url = '/';
+  const url = '/api/feed/npmjs';
 
   it('Should list feed of current user', (done) => {
 
@@ -24,7 +24,20 @@ describe('Status :', () => {
       .end(function(err, res) {
         expect(res).to.have.status(200);
         expect(res).to.be.json;
-        done();
+				expect(res.body).to.be.a('object');
+        expect(res.body.tweets).to.be.a('array')
+				done();
+      });
+  });
+
+  it('Should show name an image of user', (done) => {
+
+    chai.request(URI)
+      .get(url)
+      .end(function(err, res) {
+        expect(res).to.have.status(200);
+        expect(res.body).to.have.all.keys('name', 'picture', 'tweets');
+				done();
       });
   });
 });

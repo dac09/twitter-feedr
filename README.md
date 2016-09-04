@@ -1,10 +1,7 @@
-# !! NOT WORKING !!
-## Twitter Feedr
+## Twitter Scrapr
 
  - **Mocha and Chai** for testing.
  - **Express**
- - **LowDB**
-- **PassportJS**
 
 *install*
 ------------

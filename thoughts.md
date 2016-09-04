@@ -1,5 +1,8 @@
 ## Thoughts
 
+##Update!
+Switched to scraping, for demonstration purposes. Obviously properly accessing the API is the best idea.
+
 #### Why doesn't it work?
 Ran into major issues authenticating with twitter's API.
 
@@ -15,3 +18,6 @@ Only because its for a demo, definitely worth separating into service and FE.
 I was planning on using the await keyword: https://github.com/yortus/asyncawait
 1. Makes it easier to read the code
 2. To limit the time spent on configuration
+
+#### Tests should mock request made to twitter
+The unit tests here have been rushed, but in reality it really should mock the request to twitter, to allow testing of the actual api and not external dependencies.
