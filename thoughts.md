@@ -1,7 +1,7 @@
 ## Thoughts
 
 ##Update!
-Switched to scraping, for demonstration purposes. Obviously properly accessing the API is the best idea.
+Switched to scraping, for demonstration purposes. Obviously properly accessing the API is the best idea, but oAuth issue got in the way.
 
 #### Why API and Renderer in the same server?
 Only because its for a demo, definitely worth separating into service and FE.
