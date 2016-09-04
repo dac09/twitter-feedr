@@ -14,11 +14,9 @@ router.get('/:id', (req, res, next) => {
 	console.log('In Feed route', req.params)
 	FeedService.feedForUser(req.params.id)
 		.then((data) => {
-			console.log('In final then');
 			res.json(data);
 		})
 		.catch((err) => {
-			console.log('Error block');
 			res.json(err);
 		})
 });

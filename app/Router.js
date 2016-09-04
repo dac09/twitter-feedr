@@ -15,6 +15,10 @@ const Routes = [
 		path: '/',
 		handler:  Home,
 	},
+	{
+		path: '/static',
+		handler: express.static('app/public'),
+	},
 ];
 
 module.exports = Routes;
