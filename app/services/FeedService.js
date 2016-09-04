@@ -9,7 +9,12 @@ let service = {
 		if (id) {
 		return axios.get(`https://twitter.com/${id}`)
 						.then((res) => {
-						  return service.parseTweets(res.data);
+							let details = service.findUserDetails(res.data);
+							let tweets = service.parseTweets(res.data);
+
+							details.tweets = tweets;
+
+						  return details;
 						})
 						.catch((error) => {
 							err.status = 500;
@@ -36,6 +41,19 @@ let service = {
 
 		return tweets;
 	},
+
+	findUserDetails: (html) => {
+		let $ = cheerio.load(html)
+		let profileCard = $('.ProfileCardMini-avatarImage');
+
+		let userDetails = {};
+
+		let profileAttributes = profileCard.attr();
+		userDetails.name = profileAttributes.alt;
+		userDetails.picture = profileAttributes.src;
+
+		return userDetails;
+	}
 
 
 };
