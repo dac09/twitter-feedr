@@ -6,10 +6,21 @@
  */
 
 let express = require('express');
-let twitterFeedCtrl = autoload('./app/controllers/twitterFeedCtrl');
+const FeedService = require('../services/FeedService.js');
 
 let router = express.Router();
 
-router.get('/', twitterFeedCtrl.current);
+router.get('/:id', (req, res, next) => {
+	console.log('In Feed route', req.params)
+	FeedService.feedForUser(req.params.id)
+		.then((data) => {
+			console.log('In final then');
+			res.json(data);
+		})
+		.catch((err) => {
+			console.log('Error block');
+			res.json(err);
+		})
+});
 
 module.exports = router;

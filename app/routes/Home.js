@@ -10,7 +10,7 @@ let express = require('express');
 let router = express.Router();
 
 router.get('/', (req, res, next) => {
-	res.send('Sadly - not enough time, as oAuth isn\'t working currently.')
+	res.render('home');
 })
 
 module.exports = router;

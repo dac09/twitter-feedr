@@ -20,6 +20,7 @@ app.locals.config = config;
 let PORT = process.env.PORT || config.port || 3000;
 
 let server = http.createServer(app);
+require('es6-promise').polyfill();
 
 /* MIDDLEWARE */
 require('./config/middleware')(app, express);
